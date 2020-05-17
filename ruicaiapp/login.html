@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<script src="js/flexible.js"></script><!--rem布局脚本，需固定在此顺序，位置不要变动-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>用户登录</title>
+		<!--icon-font-->
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link rel="stylesheet" href="ali-icon/iconfont.css">
+		<!--plug-in-->
+		<link rel="stylesheet" href="plugins/swiper/swiper.min.css">
+		<link rel="stylesheet" href="plugins/layer/layer.css">
+		<!--app-->
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/app.css">
+	</head>
+
+	<body>
+		<!--wrapper start-->
+		<div class="app-wrapper">
+			<!--主体内容区域start-->
+			<div class="main-wrap over-hidden app-content-full">
+				<div class="main-con h-full bg-fff over-auto">	
+					<!--用户登录start-->
+					<div class="login-wrap">
+						<!--头像区域start-->
+						<div class="login-photoarea">
+							<img class="login-photo" src="images/login-userphoto.jpg"/>
+						</div>
+						<!--头像区域      end-->
+						<div class="form-com form-icon">
+							<div class="form-row">
+								<label class="left">
+									<i class="color-lightgreen iconfont icon-user f-46"></i>
+								</label>
+								<div class="right">
+									<input id="input-phone" class="input-normal" type="" name="" value="" placeholder="请输入手机号" />
+								</div>
+							</div>
+							<div class="form-row">
+								<label class="left">
+									<i class="color-lightgreen iconfont icon-lock f-46"></i>
+								</label>
+								<div class="right">
+									<input class="input-normal" type="password" name="" value="" placeholder="请输入密码" />
+								</div>
+							</div>
+							<div class="checkarea clearfix">
+								<div class="f_l">
+									<label for="rember" class="f-26">
+										<input class="checkicon v-middle" type="checkbox" name="" id="rember" checked="" />
+										<span class="v-middle">记住账号密码</span>
+									</label>
+								</div>	
+								<div class="f_r">
+									<a href="login-findpsw.html" class="forget f-26 color-orange">忘记密码？</a>
+								</div>	
+							</div>	
+							<div class="form-ope">
+								<a id="login" class="btn-shadow-green f-34 text-bold">登录</a>
+							</div>
+							<div class="regarea clearfix f-28">
+								<div class="text-center">
+									<a href="login-register.html" class="goreg f-26">注册账号</a>
+								</div>	
+							</div>
+						</div>
+					</div>
+					<!--用户登录     end-->
+				</div>	
+			</div>
+			<!--主体内容区域end---->
+		</div>	
+		<!--wrapper end-->
+	</body>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="plugins/layer/layer.js"></script>
+	<script src="plugins/swiper/swiper.min.js"></script>
+    <script src="js/common.js"></script>
+    <script type="text/javascript">
+    $(function(){		
+    	//验证小提示示例
+    	$("#login").click(function(){
+    		if($("#input-phone").val().trim()==''){
+	    		layer.msg('请输入手机号', {
+	    			skin:'layer-tip',
+					time: 1500
+				})
+			}else{
+				location.href="index.html"
+			}
+    	})
+    })	
+    </script>
+</html>

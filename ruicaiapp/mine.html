@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<script src="js/flexible.js"></script><!--rem布局脚本，需固定在此顺序，位置不要变动-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>我的</title>
+		<!--icon-font-->
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link rel="stylesheet" href="ali-icon/iconfont.css">
+		<!--plug-in-->
+		<link rel="stylesheet" href="plugins/swiper/swiper.min.css">
+		<link rel="stylesheet" href="plugins/layer/layer.css">
+		<!--app-->
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/app.css">
+	</head>
+
+	<body>
+		<!--wrapper start-->
+		<div class="app-wrapper">
+			<!--主体内容区域start-->
+			<div class="main-wrap over-hidden app-content-btmonly">
+				<div class="main-con h-full over-auto">	
+					<div class="hastopbg">
+						<!--头像及手机邮箱start-->
+						<div class="userphoto-area">
+							<div class="userphoto-area-con radius-all bg-fff">
+								<div class="photo">
+									<img src="images/mine-userphoto.jpg"/>
+								</div>	
+								<div class="phone f-42 text-bold text-center color-lightgreen">
+									樊林奇
+								</div>
+								<div class="mail f-26 text-bold color-999 text-center">
+									您已登录28次，加油哦！
+								</div>
+							</div>
+						</div>
+						<!--头像及手机邮箱    end-->
+						
+						<!--菜单列表start-->
+						<div class="userinfo-items">
+							<!--个人信息菜单start-->
+							<div class="userinfo-items-con radius-all bg-fff mg-btm30">
+								<a href="mine-baseinfo.html" class="item b-btm-1px flex">
+									<div class="left flex-none">
+										<i class="color-lightgreen iconfont icon-base f-46"></i>
+									</div>
+									<div class="mid f-30 flex-1">
+										基本信息
+									</div>
+									<div class="right flex-none">
+										<em class="flex-none fa fa-angle-right f-42"></em>
+									</div>
+								</a>
+								<a href="mine-changepsw.html" class="item b-btm-1px flex">
+									<div class="left flex-none">
+										<i class="color-orange iconfont icon-mima f-46"></i>
+									</div>
+									<div class="mid f-30 flex-1">
+										修改密码
+									</div>
+									<div class="right flex-none">
+										<em class="flex-none fa fa-angle-right f-42"></em>
+									</div>
+								</a>
+								<a href="mine-bindphone.html" class="item b-btm-1px flex">
+									<div class="left flex-none">
+										<i class="color-green iconfont icon-phone f-46"></i>
+									</div>
+									<div class="mid f-30 flex-1">
+										手机绑定
+									</div>
+									<div class="midext f-28 flex-none color-999">
+										13297481939
+									</div>
+									<div class="right flex-none">
+										<em class="flex-none fa fa-angle-right f-42"></em>
+									</div>
+								</a>
+							</div>
+							<!--个人信息菜单    end-->
+							
+							<!--扩展信息start-->
+							<div class="userinfo-items-con radius-all bg-fff">
+								<a href="mine-orderlist.html" class="item b-btm-1px flex">
+									<div class="left flex-none">
+										<i class="color-blue iconfont icon-dingdan f-46"></i>
+									</div>
+									<div class="mid f-30 flex-1">
+										我的订单
+									</div>
+									<div class="right flex-none">
+										<em class="flex-none fa fa-angle-right f-42"></em>
+									</div>
+								</a>
+								<a href="tiku-quanzhen-cup.html" class="item b-btm-1px flex">
+									<div class="left flex-none">
+										<i class="color-lightgreen iconfont icon-jiangbei f-46"></i>
+									</div>
+									<div class="mid f-30 flex-1">
+										模考排行
+									</div>
+									<div class="right flex-none">
+										<em class="flex-none fa fa-angle-right f-42"></em>
+									</div>
+								</a>
+								<a href="mine-suggest.html" class="item b-btm-1px flex">
+									<div class="left flex-none">
+										<i class="color-orange iconfont icon-fankui f-46"></i>
+									</div>
+									<div class="mid f-30 flex-1">
+										意见反馈
+									</div>
+									<div class="right flex-none">
+										<em class="flex-none fa fa-angle-right f-42"></em>
+									</div>
+								</a>
+								<a id="follow-us" class="item b-btm-1px flex">
+									<div class="left flex-none">
+										<i class="color-lightgreen iconfont icon-guanzhu f-46"></i>
+									</div>
+									<div class="mid f-30 flex-1">
+										关注我们
+									</div>
+									<div class="right flex-none">
+										<em class="flex-none fa fa-angle-right f-42"></em>
+									</div>
+								</a>
+								<a  class="item b-btm-1px flex item-msg">
+									<div class="left flex-none">
+										<i class="color-orange iconfont icon-kefu f-46"></i>
+									</div>
+									<div class="mid f-30 flex-1">
+										在线客服
+									</div>
+									<div class="right flex-none">
+										<em class="flex-none fa fa-angle-right f-42"></em>
+									</div>
+								</a>
+								<a href="news.html"  class="item b-btm-1px flex">
+									<div class="left flex-none">
+										<i class="color-blue iconfont icon-zixun f-46"></i>
+									</div>
+									<div class="mid f-30 flex-1">
+										公告资讯
+									</div>
+									<div class="right flex-none">
+										<em class="flex-none fa fa-angle-right f-42"></em>
+									</div>
+								</a>
+							</div>
+							<!--扩展信息end-->
+						</div>
+						<!--菜单列表end-->
+						
+						<!--退出按钮start-->
+						<div class="userinfo-logout mg-top30 mg-btm30">
+							<a href="login.html" class="btn-shadow-orange f-34">退出登录</a>
+						</div>
+						<!--退出按钮 end-->
+					</div>	
+				</div>	
+			</div>
+			<!--主体内容区域end---->
+			
+			<!--底部导航start-->
+			<div class="app-footer b-top-1px">
+				<ul class="nav dis-flex">
+					<li class="nav-item item-01 flex-1">
+						<a href="index.html" class="nav-item-con">
+							<i class="iconfont icon-home"></i>
+							<em>首页</em>
+						</a>
+					</li>
+					<li class="nav-item item-02 flex-1">
+						<a href="zhibo.html" class="nav-item-con">
+							<i class="iconfont icon-zhibo"></i>
+							<em>直播</em>
+						</a>
+					</li>
+					<li class="nav-item item-02 flex-1">
+						<a href="kecheng.html" class="nav-item-con">
+							<i class="iconfont icon-kecheng"></i>
+							<em>课程</em>
+						</a>
+					</li>
+					<li class="nav-item item-04 flex-1">
+						<a href="tiku.html" class="nav-item-con">
+							<i class="iconfont icon-tiku"></i>
+							<em>题库</em>
+						</a>
+					</li>
+					<li class="nav-item item-05 flex-1 active">
+						<a href="mine.html" class="nav-item-con">
+							<i class="iconfont icon-mine"></i>
+							<em>我的</em>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--底部导航end---->
+			
+			<!--关于我们弹窗start-->
+			<div class="about-con hidden">
+				欢迎您使用手机版模拟考试平台,我们将以最真诚的态度和最专业的服务为您的考试保驾护航。
+			</div>
+			<!--关于我们弹窗   end-->
+			
+			<!--扫码关注层弹出start-->
+			<div class="layer-follow hidden">
+				<div class="layer-follow-con">
+					<div class="head text-center">
+						<h1 class="f-38 text-bold color-fff">扫码关注</h1>
+						<h2 class="f-28 text-bold color-fff">瑞才官方公众号</h2>
+					</div>
+					<div class="body">
+						<div class="codepic">
+							<img src="images/code.jpg"/>
+						</div>
+						<div class="codedes f-28 text-center">
+							长按识别图中二维码
+						</div>
+					</div>
+				</div>
+				<!--关闭按钮-->
+				<i class="fa fa-times close layer-close"></i>
+			</div>
+			<!--扫码关注层弹出      end-->
+			
+		</div>
+		<!--wrapper end-->
+	</body>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="plugins/layer/layer.js"></script>
+	<script src="plugins/swiper/swiper.min.js"></script>
+    <script src="js/common.js"></script>
+    <script type="text/javascript">
+    $(function(){		
+    	//关注我们弹出层
+		$("#follow-us").click(function() {	
+			layer.open({
+				skin: 'layer-custom',
+				type: 1,
+				title: false,
+				closeBtn: 0,
+				shade: 0.7,
+				area: '70%',
+				offset: 'auto',
+				shadeClose: false,
+				anim: 0,
+				isOutAnim: false,
+				scrollbar: false,
+				content: $(".layer-follow")
+			});				
+		});
+    	//关于我们弹出层
+		$("#showAbout").click(function() {			  		
+			layer.open({
+				skin: 'layer-simple',
+				type: 1,
+				title: '关于我们',
+				closeBtn: 0,
+				btn: ['确定'],
+				shade: 0.7,
+				area: '80%',
+				offset: 'auto',
+				shadeClose: false,
+				anim: 0,
+				isOutAnim: false,
+				scrollbar: false,
+				content: $(".about-con")
+			});				
+		});
+		
+		//在线客服
+    	$(".item-msg").click(function(){
+    		layer.open({
+				skin: 'layer-custom',
+				type: 2,
+				title: '在线咨询',
+				closeBtn:1,
+				shade: 0.7,
+				area: ['100%','80%'],
+				offset: 'b',
+				shadeClose: true,
+				anim: 2,
+				isOutAnim: false,
+				scrollbar: false,
+				content:'https://yzf.qq.com/xv/web/static/chat/index.html?sign=37ef9b97da2450c12246c8eb1de3b433d32b810ba51af8b57e4c6fdb7ea5a3122aeafd1434f946107108a1e1c38c99114fb0aae'
+			});
+		})	
+	})	
+    </script>
+</html>

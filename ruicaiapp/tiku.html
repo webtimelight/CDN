@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<script src="js/flexible.js"></script><!--rem布局脚本，需固定在此顺序，位置不要变动-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>题库</title>
+		
+		<!--icon-font-->
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link rel="stylesheet" href="ali-icon/iconfont.css">
+		<!--plug-in-->
+		<link rel="stylesheet" href="plugins/swiper/swiper.min.css">
+		<link rel="stylesheet" href="plugins/layer/layer.css">
+		<link rel="stylesheet" href="plugins/mselect/mobileSelect.css"/>
+		<!--app-->
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/app.css">
+	</head>
+
+	<body>
+		<!--wrapper start-->
+		<div class="app-wrapper">
+			<!--主体内容区域start-->
+			<div class="main-wrap over-hidden app-content-btmonly">
+				<div class="main-con h-full over-auto">	
+					<div class="tiku-wrap">
+						<!--轮播图start-->
+						<div class="tiku-slide">
+							<!--焦点图strat-->
+							<!-- Swiper -->
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<a href=""><img src="images/tiku-banner.jpg"></a>
+									</div>
+								</div>
+								<!-- Add Pagination -->
+								<div class="swiper-pagination2 swiper-pagination-fraction"></div>
+							</div>
+							<!--焦点图end-->												
+						</div>
+						<!--轮播图 end-->
+						
+						<!--图标链接start-->
+						<div class="tiku-sel-area f-28 flex">
+							<h2 class="header clearfix f-34">
+								<span class="f_l text-bold">题库练习</span>
+							</h2>
+							<span class="course-text"></span>
+							<span class="course-ope"></span>
+							<!--隐藏域用于接收选中科目-->
+							<input type="hidden" name="course" id="course-input" value="0" />
+						</div>
+						<div class="con-box mg-btm30">
+							<div class="main-icon  bg-fff radius-all">
+								<div class="normal-icon-box flex">
+									<a href="tiku-zhangjie.html" class="icon-item">
+										<img src="images/index-cate-icon1.png"/> 
+										<span class="icon-text f-26">章节练习</span>
+									</a>
+									<a href="tiku-zhuanxiang.html" class="icon-item">
+										<img src="images/index-cate-icon2.png"/> 
+										<span class="icon-text f-26">专项训练</span>
+									</a>
+									<a href="tiku-moni.html" class="icon-item">
+										<img src="images/index-cate-icon3.png"/> 
+										<span class="icon-text f-26">模拟试卷</span>
+									</a>
+									<a href="tiku-yati.html" class="icon-item">
+										<img src="images/index-cate-icon4.png"/> 
+										<span class="icon-text f-26">考前押题</span>
+									</a>
+									<a href="tiku-huizuo.html" class="icon-item">
+										<img src="images/index-cate-icon5.png"/> 
+										<span class="icon-text f-26">模考回做</span>
+									</a>
+									<a href="tiku-shoucang.html" class="icon-item">
+										<img src="images/index-cate-icon6.png"/> 
+										<span class="icon-text f-26">重点收藏</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!--图标链接 end-->
+						
+						<!--全真模考链接start-->
+						<div class="link-qzmk mg-btm30">
+							<div class="link-title f-28 flex">
+							    <h2 class="text-bold f-34">全真模考</h2>
+								<p class="f-28"><i>•</i><span>原题呈现</span></p>
+							</div>
+							<a class="con-box qzmkTarget">
+								<img src="images/link-qzmk.jpg"/>
+							</a>
+						</div>
+						<!--全真模考链接end-->
+						
+					</div>	
+				</div>	
+			</div>
+			<!--主体内容区域end---->
+			
+			<!--底部导航start-->
+			<div class="app-footer b-top-1px">
+				<ul class="nav dis-flex">
+					<li class="nav-item item-01 flex-1">
+						<a href="index.html" class="nav-item-con">
+							<i class="iconfont icon-home"></i>
+							<em>首页</em>
+						</a>
+					</li>
+					<li class="nav-item item-02 flex-1">
+						<a href="zhibo.html" class="nav-item-con">
+							<i class="iconfont icon-zhibo"></i>
+							<em>直播</em>
+						</a>
+					</li>
+					<li class="nav-item item-02 flex-1">
+						<a href="kecheng.html" class="nav-item-con">
+							<i class="iconfont icon-kecheng"></i>
+							<em>课程</em>
+						</a>
+					</li>
+					<li class="nav-item item-04 flex-1 active">
+						<a href="tiku.html" class="nav-item-con">
+							<i class="iconfont icon-tiku"></i>
+							<em>题库</em>
+						</a>
+					</li>
+					<li class="nav-item item-05 flex-1">
+						<a href="mine.html" class="nav-item-con">
+							<i class="iconfont icon-mine"></i>
+							<em>我的</em>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--底部导航end---->
+			
+			<!--全真模考弹窗（模考未开放时弹窗，开放时跳转）start-->
+			<div class="qzmk-con hidden">
+				全真模考将在考试前一个月定时开放，当前时间试卷暂未发布，敬请关注。
+			</div>
+			<!--全真模考弹窗（模考未开放时弹窗，开放时跳转） end-->
+			
+		</div>
+		<!--wrapper end-->
+	</body>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="plugins/layer/layer.js"></script>
+	<script src="plugins/swiper/swiper.min.js"></script>
+	<script src="plugins/mselect/mobileSelect.js"></script>
+    <script src="js/common.js"></script>
+    <script type="text/javascript">
+    $(function(){		
+    	//题库科目选择
+		var current=$("input#course-input").val();//默认第几项(取隐藏域的value)
+		var selList=[
+		            { id: '0', value: '初级会计实务' },
+		            { id: '1', value: '经济法基础' }
+		        ];
+		var courseList = new MobileSelect({
+		    trigger: '.course-ope',
+		    title: '请选择题库科目',
+		    wheels: [{data:selList}],
+		    position:[current],//默认位置
+		    callback:function(indexArr, data){
+		        console.log(data);
+		        $(".course-text").html('<i>•</i><span>'+data[0].value+'</span>')//显示科目名称
+		        $("input#course-input").val(data[0].id)//写入隐藏域
+		    }
+		});
+		
+		$(".course-text").html('<i>•</i><span>'+courseList.wheelsData[0].data[current].value+'</span>');//初始显示科目
+		
+		
+		//全真模考提示
+		$(".qzmkTarget").click(function() {		
+			if(false){//如果模考在开放时间内则跳转url
+				location.href="tiku-quanzhen.html";
+			}else{//如果未开放模考则弹出提示窗
+				layer.open({
+					skin: 'layer-simple',
+					type: 1,
+					title: '关于全真模考',
+					closeBtn: 0,
+					btn: ['我知道了'],
+					shade: 0.7,
+					area: '80%',
+					offset: 'auto',
+					shadeClose: false,
+					anim: 0,
+					isOutAnim: false,
+					scrollbar: false,
+					content: $(".qzmk-con")
+				});
+			}	
+		});
+	})	
+    </script>
+</html>

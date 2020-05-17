@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<script src="js/flexible.js"></script><!--rem布局脚本，需固定在此顺序，位置不要变动-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>api弹窗反馈</title>
+		
+		<!--icon-font-->
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link rel="stylesheet" href="ali-icon/iconfont.css">
+		<!--plug-in-->
+		<link rel="stylesheet" href="plugins/swiper/swiper.min.css">
+		<link rel="stylesheet" href="plugins/layer/layer.css">
+		<link rel="stylesheet" href="plugins/mselect/mobileSelect.css"/>
+		<!--app-->
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/app.css">
+	</head>
+
+	<body>
+		<!--wrapper start-->
+		<div class="app-wrapper">
+			<!--主体内容区域start-->
+			<div class="main-wrap over-hidden app-content-full con-box">
+				<!--普通小提示-->
+				<p class="f-30 color-333 pd-top25 pd-btm25">
+					<h2 class="f-26 color-999 mg-btm15">普通小提示</h2>
+					<a class="btn-sm btn-green f-26" onclick="tip()">表单提交提示</a>
+				</p>
+				
+				<!--操作成功与失败-->
+				<p class="f-30 color-333 pd-top25 pd-btm25">
+					<h2 class="f-26 color-999 mg-btm15">操作成功与失败</h2>
+					<a class="btn-sm btn-green f-26" onclick="tipSuccess()">删除成功提示</a>
+					<a class="btn-sm btn-orange f-26" onclick="tipFail()">操作失败提示</a>
+				</p>
+				
+				<!--加载等待（loading.show();loading.hide()）-->
+				<p class="f-30 color-333 pd-top25 pd-btm25">
+					<h2 class="f-26 color-999 mg-btm15">加载等待loading.show();loading.hide()</h2>
+					<a class="btn-sm btn-green f-26" onclick="loadShow()">loading.show('数据加载中')</a>
+					<a class="btn-sm btn-orange f-26" onclick="loadHide()">loading.hide()</a>
+				</p>
+				
+				<!--layer的弹窗-->
+				<p class="f-30 color-333 pd-top25 pd-btm25">
+					<h2 class="f-26 color-999 mg-btm15">layer弹窗</h2>
+					<a class="btn-sm btn-green f-26" onclick="layerSimple()">单个按钮</a>
+					<a class="btn-sm btn-orange f-26" onclick="layerProm()">询问弹窗简洁</a>
+					<a class="btn-sm btn-orange f-26" onclick="layerPromTit()">询问弹窗标题栏</a>
+					<a class="btn-sm btn-blue f-26" onclick="layerHalf()">半屏弹窗</a>
+					<a class="btn-sm btn-orange f-26 mg-top15" onclick="layerIframeHalf()">iframe半屏弹窗</a>
+					<a class="btn-sm btn-green f-26  mg-top15" onclick="layerFull()">全屏弹窗</a>
+					<a class="btn-sm btn-orange f-26  mg-top15" onclick="layerFullBack()">全屏带返回仿新页</a>
+					<a class="btn-sm btn-blue f-26  mg-top15" onclick="layerCustom()">自定义弹窗</a>
+					<a class="btn-sm btn-blue f-26  mg-top15" onclick="layerTrans()">自定义弹窗2</a>
+				</p>
+				
+				<!--个性化要求不方便显示-->
+				<p class="f-30 color-333 pd-top25 pd-btm25">
+					<h2 class="f-26 color-999 mg-btm15">页面局部有个性化要求了，不方便静态展示</h2>
+					<p class="f-26 color-orange bg-fff pd-btm10 pd-top10 mg-btm25">1.首页的整块“在线课堂”，和底部导航的“直播”是动态控制的，如果该时间段没有直播，则这两块消失。底部导航样式没问题，少一个项，会平分布局</p>
+					
+					<p class="f-26 color-orange bg-fff pd-btm10 pd-top10 mg-btm15">2.题库频道，下方的“全真模考”图片链接，根据是否开放模考，点击时分别处理是弹出“未开放”提醒，或者直接跳转到模考专题页，弹窗提示和模考页面已写好了</p>
+				</p>
+				
+			</div>
+			<!--主体内容区域end---->
+			
+			
+			<!--提示段落内容start-->
+			<div class="qzmk-con hidden">
+				全真模考将在考试前一个月定时开放，当前时间试卷暂未发布，敬请关注。
+			</div>
+			<!--提示段落内容 end-->
+			
+			<!--新闻详细弹窗start-->
+			<div class="news-con hidden">
+				<p>
+					明天进行第二次综合性万人模考，内容是全部内容，下午13.30开始第一场，晚上19.30开始第二场。两场内容一样，选择适合自己的时间就好了，没必要两个都参加。有问题及时联系自己的客服进行解决。
+				</p>
+			</div>
+			<!--新闻详细弹窗   end-->
+			
+			<!--答题卡弹窗start-->
+			<div class="card-con hidden">
+				内容
+			</div>
+			<!--答题卡弹窗   end-->
+			
+			<!--纠错弹窗start-->
+			<div class="correct-prompt hidden">
+				<div class="form-prompt">
+					<div class="form-row">
+						<label class="left">试卷编号:</label>
+						<div class="right">
+							<span class="color-orange">QZ2135</span>
+						</div>
+					</div>	
+					<div class="form-row">
+						<label class="left">问题主题:</label>
+						<div class="right">
+							<input type="" name=""  value="" />
+						</div>
+					</div>
+					<div class="form-row">
+						<label class="left">问题描述:</label>
+						<div class="right">
+							<textarea type="" name=""  value="" /></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--纠错弹窗   end-->
+			
+			<!--交卷弹窗start-->
+			<div class="submit-layer hidden">
+				<div class="con-area f-28">
+					内容
+				</div>
+				<div class="ope-area f-28">
+					<a class="ope-btn btn-blue">跳转其他</a>
+					<a class="ope-btn btn-orange layer-close">关闭弹窗</a>
+				</div>
+			</div>
+			<!--交卷弹窗   end-->
+			
+			<!--扫码关注层弹出start-->
+			<div class="layer-follow hidden">
+				<div class="layer-follow-con">
+					<div class="head text-center">
+						<h1 class="f-38 text-bold color-fff">扫码关注</h1>
+						<h2 class="f-28 text-bold color-fff">瑞才官方公众号</h2>
+					</div>
+					<div class="body">
+						<div class="codepic">
+							<img src="images/code.jpg"/>
+						</div>
+						<div class="codedes f-28 text-center">
+							长按识别图中二维码
+						</div>
+					</div>
+				</div>
+				<!--关闭按钮-->
+				<i class="fa fa-times close layer-close"></i>
+			</div>
+			<!--扫码关注层弹出      end-->
+			
+			<!--开始按钮提示start-->
+			<div class="start-layer hidden">
+				<div class="text-area f-28">
+					点击<i class="color-blue">"继续练习"</i>按照上次训练的进度继续做题。点击<i class="color-orange">"重新开始"</i>,从第一题开始,清空原记录！
+				</div>
+				<div class="layer-custom-opearea f-28">
+					<a class="ope-btn btn-blue">继续练习</a>
+					<a class="ope-btn btn-orange">重新开始</a>
+					<a class="ope-btn btn-green">其他操作</a>
+				</div>
+			</div>
+			<!--开始按钮提示   end-->
+			
+		</div>
+		<!--wrapper end-->
+	</body>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="plugins/layer/layer.js"></script>
+	<script src="plugins/swiper/swiper.min.js"></script>
+	<script src="plugins/mselect/mobileSelect.js"></script>
+    <script src="js/common.js"></script>
+    <script type="text/javascript">
+    	function loadShow(){
+    		loadingShow('数据加载中...')
+    	};
+    	
+    	function loadHide(){
+    		loadingHide()
+    	};
+    	function tip(){
+    		layer.msg('用户名为必填项', {
+    			skin:'layer-tip',
+				time: 1500
+			})
+    	};
+    	function tipSuccess(){
+    		layer.msg('删除成功', {
+    			skin:'layer-tip',
+				time: 1500,
+				icon:'1'
+			})
+    	};
+    	function tipFail(){
+    		layer.msg('操作失败', {
+    			skin:'layer-tip',
+				time: 1500,
+				icon:'2'
+			})
+    	};
+    	
+    	function layerSimple(){
+    		layer.open({
+				skin: 'layer-simple',
+				type: 1,
+				title: '关于全真模考',
+				closeBtn: 0,
+				btn: ['我知道了'],
+				shade: 0.7,
+				area: '80%',
+				offset: 'auto',
+				shadeClose: false,
+				anim: 0,
+				isOutAnim: false,
+				scrollbar: false,
+				content:$(".qzmk-con")
+			});
+    	};
+    	function layerProm(){
+    		layer.open({
+				skin: 'layer-prom',
+				type: 1,
+				title: '友情提示',
+				btn: ['取消','删除'],
+				btn2:function(){
+					layer.msg('删除成功', {
+		    			skin:'layer-tip',
+						time: 1500
+					})
+				},
+				closeBtn:0,
+				shade: 0.7,
+				area: '80%',
+				offset: 'auto',
+				shadeClose: false,
+				anim: 0,
+				isOutAnim: false,
+				scrollbar: false,
+				content:'确定要删除重点收藏试题吗？'
+			});
+    	};
+    	
+    	function layerPromTit(){
+    		layer.open({
+				skin: 'layer-custom',
+				type: 1,
+				title: '试题纠错',
+				btn: ['取消','提交'],
+				closeBtn:1,
+				shade: 0.7,
+				area: '80%',
+				offset: 'auto',
+				shadeClose: false,
+				anim: 0,
+				isOutAnim: false,
+				scrollbar: false,
+				content: $(".correct-prompt")
+			});
+    	};
+    	
+    	function layerHalf(){
+    		layer.open({
+				skin: 'layer-custom',
+				type: 1,
+				title: '答题卡',
+				closeBtn:1,
+				shade: 0.7,
+				area: ['100%','80%'],
+				offset: 'b',
+				shadeClose: true,
+				anim: 2,
+				isOutAnim: false,
+				scrollbar: false,
+				content: $(".card-con")
+			});
+    	};
+    	function layerFull(){
+    		layer.open({
+				skin: 'layer-custom',
+				type: 1,
+				title: false,
+				btn: false,
+				closeBtn:0,
+				shade: 0.7,
+				area: ['100%','100%'],
+				offset: 'auto',
+				shadeClose: false,
+				anim: 0,
+				isOutAnim: false,
+				scrollbar: false,
+				content: $(".submit-layer")
+			});
+    	};
+    	
+    	function layerFullBack(){
+    		layer.open({
+				skin: 'layer-full',
+				type: 1,
+				title: '仿新页带返回',
+				closeBtn: 1,
+				btn: 0,
+				shade: 0.7,
+				area: ['100%','100%'],
+				offset: 'auto',
+				shadeClose: false,
+				anim: 0,
+				isOutAnim: false,
+				scrollbar: false,
+				content: $(".news-con")
+			});
+    	};
+    	
+    	function layerIframeHalf(){
+    		layer.open({
+				skin: 'layer-custom',
+				type: 2,
+				title: '在线咨询',
+				closeBtn:1,
+				shade: 0.7,
+				area: ['100%','80%'],
+				offset: 'b',
+				shadeClose: true,
+				anim: 2,
+				isOutAnim: false,
+				scrollbar: false,
+				content:'http://www.baidu.com'
+			});
+    	};
+    	function layerCustom(){
+    		layer.open({
+				skin: 'layer-custom',
+				type: 1,
+				title: '提示信息',
+				btn: false,
+				closeBtn:1,
+				shade: 0.7,
+				area: '80%',
+				offset: 'auto',
+				shadeClose: false,
+				anim: 0,
+				isOutAnim: false,
+				scrollbar: false,
+				content: $(".start-layer")
+			});
+    	};
+    	
+    	function layerTrans(){
+    		layer.open({
+				skin: 'layer-custom',
+				type: 1,
+				title: false,
+				closeBtn: 0,
+				shade: 0.7,
+				area: '70%',
+				offset: 'auto',
+				shadeClose: false,
+				anim: 0,
+				isOutAnim: false,
+				scrollbar: false,
+				content: $(".layer-follow")
+			});
+    	}
+    </script>
+</html>

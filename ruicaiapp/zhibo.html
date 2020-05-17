@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<script src="js/flexible.js"></script><!--rem布局脚本，需固定在此顺序，位置不要变动-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>直播</title>
+		
+		<!--icon-font-->
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link rel="stylesheet" href="ali-icon/iconfont.css">
+		<!--plug-in-->
+		<link rel="stylesheet" href="plugins/swiper/swiper.min.css">
+		<link rel="stylesheet" href="plugins/layer/layer.css">
+		<link rel="stylesheet" href="plugins/dplayer/DPlayer.min.css"/>
+		<!--app-->
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/app.css">
+	</head>
+
+	<body>
+		<!--wrapper start-->
+		<div class="app-wrapper">
+			<!--主体内容区域start-->
+			<div class="main-wrap over-hidden app-content-btmonly">
+				<div class="main-con h-full over-auto">	
+					<div class="zhibo-wrap">
+						<!--视频区域start-->
+						<div class="video-area">
+							<div id="dplayer"></div>										
+						</div>
+						<!--视频区域 end-->		
+						
+						<!--扩展区域start-->
+						<div class="ext-area">
+							<!--直播信息start-->
+							<div class="des-area f-26 mg-btm30">
+								<div class="toptit">
+									<span class="state green"><img src="images/audio.svg"/><b>直播中</b></span>
+									<h2 class="f-28 text-bold">第01节 货币资金1（第02章 资产）</h2>
+								</div>
+								<p class="btmdate">直播时间：<span class="color-orange">2020-05-06 07:40 至 2020-05-06 10:40</span></p>
+							</div>
+							<!--直播信息end-->
+							
+							<!--其他直播start-->
+							<div class="site-video  con-box">
+								<h2 class="header clearfix mg-btm25">
+									<span class="f_l text-bold f-34">其他直播</span>
+								</h2>
+								<ul class="video-list">
+									<li class="radius-all bg-fff mg-btm30">
+										<a class="list-item flex">
+											<div class="left flex-1">
+												<img class="video-img" src="images/course-03.jpg"/>
+											</div>
+											<div class="right flex-1">
+												<h1 class="f-26 mg-btm15 color-999">直播预告</h1>
+												<h3 class="tit-nowrap  f-28 mg-btm15">初级会计实务-冲刺押题班</h3>
+												<p class="clearfix f-24 color-orange mg-btm10">
+													开播时间：2020-05-08 07:40
+												</p>
+												<p class="clearfix f-24 color-999 mg-btm15">
+													敬请期待...
+												</p>
+											</div>
+										</a>
+									</li>
+									<li class="radius-all bg-fff mg-btm30">
+										<a class="list-item flex">
+											<div class="left flex-1">
+												<img class="video-img" src="images/course-01.jpg"/>
+											</div>
+											<div class="right flex-1">
+												<h1 class="f-26 mg-btm15 color-999">直播预告</h1>
+												<h3 class="tit-nowrap  f-28 mg-btm15">初级会计实务-基础精讲班</h3>
+												<p class="clearfix f-24 color-orange mg-btm10">
+													开播时间：2020-05-09 06:20
+												</p>
+												<p class="clearfix f-24 color-999 mg-btm15">
+													敬请期待...
+												</p>
+											</div>
+										</a>
+									</li>
+									<li class="radius-all bg-fff mg-btm30">
+										<a class="list-item flex">
+											<div class="left flex-1">
+												<img class="video-img" src="images/course-02.jpg"/>
+											</div>
+											<div class="right flex-1">
+												<h1 class="f-26 mg-btm15 color-999">直播预告</h1>
+												<h3 class="tit-nowrap  f-28 mg-btm15">初级会计实务-考点总结班</h3>
+												<p class="clearfix f-24 color-orange mg-btm10">
+													开播时间：2020-05-11 08:00
+												</p>
+												<p class="clearfix f-24 color-999 mg-btm15">
+													敬请期待...
+												</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<!--其他直播 end-->
+						</div>
+						<!--扩展区域end-->
+					</div>	
+				</div>	
+			</div>
+			<!--主体内容区域end---->
+			
+			<!--底部导航start-->
+			<div class="app-footer-ope b-top-1px">
+				<ul class="nav dis-flex f-24">
+					<li class="nav-item item-share flex-none">
+						<a class="nav-item-con">
+							<i class="iconfont icon-share"></i>
+							<em>分享</em>
+						</a>
+					</li>
+					<li class="nav-item item-back flex-1">
+						<a href="javascript:history.go(-1)" class="nav-item-con btn-orange">
+							<i class="iconfont icon-chexiao"></i>
+							<em>返回</em>
+						</a>
+					</li>
+					<li class="nav-item item-msg flex-1">
+						<a class="nav-item-con btn-green">
+							<i class="iconfont icon-xiaoxi"></i>
+							<em>在线咨询</em>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--底部导航end---->
+			
+			<!--分享弹出层start-->
+			<div class="layer-share h-full hidden">
+				<img class="arr" src="images/share-arr.png">
+				<div class="text">
+					<p>1.请点击右上角【···】</p>
+					<p>2.通过【发送给朋友】来分享给好友</p>
+				</div>
+				<span class="btn-aph layer-closeAll" onclick="layer.closeAll()">
+						我知道了
+				</span>
+			</div>
+			<!--分享弹出层end-->
+			
+		</div>
+		<!--wrapper end-->
+	</body>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="plugins/layer/layer.js"></script>
+	<script src="plugins/swiper/swiper.min.js"></script>
+	<script src="plugins/dplayer/DPlayer.min.js"></script>
+    <script src="js/common.js"></script>
+    <script type="text/javascript">
+    $(function(){	
+    	//视频初始化
+        const dp = new DPlayer({
+		    container: document.getElementById('dplayer'),
+		    autoplay: true,
+		    video: {
+		        url: 'images/rcvideo.mp4',
+		        pic: 'images/rcvideo.jpg',
+		        thumbnails: 'images/rcvideo.jpg'
+		    }
+		});
+		
+		//视频x5层级
+		$(".video-area video").attr("x5-video-player-type","h5-page");
+		
+		//分享
+		$(".item-share").click(function() {			  		
+			layer.open({
+				skin: 'layer-custom',
+				type: 1,
+				title:false,
+				btn:false,
+				closeBtn:false,
+				shade: 0.8,
+				area: ['100%','100%'],
+				offset: 'auto',
+				shadeClose: true,
+				anim: 2,
+				isOutAnim: false,
+				scrollbar: false,
+				content: $(".layer-share")
+			});				
+		});
+		
+		//在线客服
+    	$(".item-msg").click(function(){
+    		layer.open({
+				skin: 'layer-custom',
+				type: 2,
+				title: '在线咨询',
+				closeBtn:1,
+				shade: 0.7,
+				area: ['100%','80%'],
+				offset: 'b',
+				shadeClose: true,
+				anim: 2,
+				isOutAnim: false,
+				scrollbar: false,
+				content:'https://yzf.qq.com/xv/web/static/chat/index.html?sign=37ef9b97da2450c12246c8eb1de3b433d32b810ba51af8b57e4c6fdb7ea5a3122aeafd1434f946107108a1e1c38c99114fb0aae'
+			});
+		})
+    })	
+    </script>
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<script src="js/flexible.js"></script><!--rem布局脚本，需固定在此顺序，位置不要变动-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>试卷-单题</title>
+		<!--icon-font-->
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link rel="stylesheet" href="ali-icon/iconfont.css">
+		<!--plug-in-->
+		<link rel="stylesheet" href="plugins/swiper/swiper.min.css">
+		<link rel="stylesheet" href="plugins/layer/layer.css">
+		<link rel="stylesheet" type="text/css" href="plugins/calculator/calculator.css"/>
+		<!--app-->
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/app.css">
+	</head>
+
+	<body>
+		<!--wrapper start-->
+		<div class="app-wrapper">
+			<!--头部标题start-->
+			<div class="app-header">
+				<div class="main-tit color-fff text-center text-bold f-34 tit-nowrap">
+					第1节 会计概念、职能和目标
+				</div>
+				<a href="javascript:history.go(-1)" class="opeleft f-60 color-fff"><i class="fa fa-angle-left"></i></a>
+			</div>
+			<!--头部标题end---->
+			
+			<!--主体内容区域start-->
+			<div class="main-wrap over-hidden app-content">
+				<div class="main-con h-full over-hidden">	
+					<!--试卷主体start-->
+					<div class="paper-wrap h-full over-hidden">
+						<!--状态标题栏start-->
+						<div class="paper-state">
+							<a class="opeleft f-28 color-orange">单选题</a>
+							<div id="showcard" class="main-tit  text-center f-30 tit-nowrap">
+								第<i class="curnum color-orange">1</i>题/共9题<i class="color-lightgreen">（答题卡）</i>	
+							</div>
+							<a class="operight f-28 color-orange"></a>
+						</div>
+						<!--状态标题栏      end-->
+						<!--试题及答案start-->
+						<div class="paper-body">
+							<!--试题-->
+							<div class="question-area">
+								<h1 class="ques-tit f-30 b-btm-1px">1.下列各项中不属于核算职能的内容的是（ ）</h1>
+								<div class="ques-con">
+									<ul class="options" data-question-type="radio"><!--题目（单选、复选）类型标记-->
+										<li class="option-item">
+											<span class="left"><em class="uppercase">A</em></span>
+											<span class="right">财务成果的处理</span>
+										</li>
+										<li class="option-item">
+											<span class="left"><em class="uppercase">B</em></span>
+											<span class="right">财务的使用</span>
+										</li>
+										<li class="option-item ok"><!--参考答案标识-->
+											<span class="left"><em class="uppercase">C</em></span>
+											<span class="right">真实性审查</span>
+										</li>
+										<li class="option-item">
+											<span class="left"><em class="uppercase">D</em></span>
+											<span class="right">成本的计算</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!--答案-->
+							<div class="answer-area">
+								<div class="ans-info">
+									<span class="ans-info-ok">参考答案：<i>--</i></span>
+									<span class="ans-info-mine">你的答案：<i>--</i></span>
+									<span class="ans-info-state">回答--</span>
+								</div>
+								<div class="ans-ext">
+									<h2 class="title b-btm-1px">名师解析：</h2>
+									<div class="content">
+										<p>选项C属于监督职能。会计的监督职能，是指对特定主体经济活动和相关会计核算的真实性。</p>
+										<p>事业单位的经济活动进行完整的、连续的、系统的核算和监督，受托责任履行情况为主要目的的经济管理活动。</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--试题及答案  end-->
+					</div>
+					<!--试卷主体 end-->	
+				</div>	
+			</div>
+			<!--主体内容区域end---->
+			
+			<!--底部功能导航start-->
+			<div class="paper-footer b-top-1px">
+				<ul class="nav dis-flex">
+					<li class="nav-item item-01 flex-1">
+						<a id="answer" class="nav-item-con">
+							<i class="iconfont icon-daan"></i>
+							<em>答案</em>
+						</a>
+					</li>
+					<li class="nav-item item-02 flex-1">
+						<a id="mark" class="nav-item-con">
+							<i class="iconfont icon-biaoji"></i>
+							<em>标记</em>
+						</a>
+					</li>
+					<li class="nav-item item-02 flex-1">
+						<a id="submit" class="nav-item-con nav-item-submit color-orange">
+							<i class="iconfont icon-jiaojuan"></i>
+							<em>交卷</em>
+						</a>
+					</li>
+					<li class="nav-item item-04 flex-1">
+						<a id="fav" class="nav-item-con">
+							<i class="iconfont icon-shoucang"></i>
+							<em>收藏</em>
+						</a>
+					</li>
+					<li class="nav-item item-05 flex-1">
+						<a id="jsq" class="nav-item-con">
+							<i class="iconfont icon-jisuanqi"></i>
+							<em>计算器</em>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--底部功能导航end---->
+			
+			<!--纠错悬浮按钮start-->
+			<div id="correct" class="correct-icon iconCanMove f-26">
+				<i class="iconfont icon-xiangpica"></i>
+				<em>纠错</em>
+			</div>
+			<!--纠错悬浮按钮end-->
+			
+			<!--纠错弹窗start-->
+			<div class="correct-prompt hidden">
+				<div class="correct-mod">
+					<div class="form-com">
+						<div class="form-row">
+							<label class="top">
+								错误类型（支持多选）：
+							</label>
+							<div class="btm">
+								<div class="check-group">
+									<div class="checkbox">
+										<input class="input-checkbox" name="" id="c1" value="" type="checkbox">
+										<label for="c1">
+							                <i class="icon-checkbox"></i>
+							                <div class="checkbox-text"><p>答案错误</p></div>
+							            </label>
+									</div>
+									<div class="checkbox">
+										<input class="input-checkbox" name="" id="c2" value="" type="checkbox">
+										<label for="c2">
+							                <i class="icon-checkbox"></i>
+							                <div class="checkbox-text"><p>题干错误</p></div>
+							            </label>
+									</div>
+									<div class="checkbox">
+										<input class="input-checkbox" name="" id="c3" value="" type="checkbox">
+										<label for="c3">
+							                <i class="icon-checkbox"></i>
+							                <div class="checkbox-text"><p>解析错误</p></div>
+							            </label>
+									</div>
+									<div class="checkbox">
+										<input class="input-checkbox" name="" id="c4" value="" type="checkbox">
+										<label for="c4">
+							                <i class="icon-checkbox"></i>
+							                <div class="checkbox-text"><p>其他错误</p></div>
+							            </label>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="form-row">
+							<label class="top pd-btm25">
+								试题出错原因：
+							</label>
+							<div class="btm">
+								<textarea class="textarea-normal correct-con limit-con f-28" data-max="200" placeholder="请详细描述试题出错原因" name="" rows="" cols=""></textarea>
+								<div class="inputtip clearfix f-26 color-999 mg-top15">
+									<span class="pull-right"><em class="correct-num limit-num">0</em>/<em class="limit-max">200</em></span>
+									您还可以输入<i class="correct-num-rest limit-num-rest limit-max">200</i>个字符
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--纠错弹窗   end-->
+			
+			<!--计算器start-->
+			<div class="calculator hidden">
+				<div class="calc-screen">
+                    <div class="calc-result"><span class="data">0</span></div>
+                </div>
+                <div class="calc-buttons">
+                    <input type="button" class="buttons" value="AC">
+                    <input type="button" class="buttons" value="←">
+                    <input type="button" class="buttons" value="%">
+                    <input type="button" class="buttons" value="÷">
+                    <input type="button" class="buttons" value="7">
+                    <input type="button" class="buttons" value="8">
+                    <input type="button" class="buttons" value="9">
+                    <input type="button" class="buttons" value="×">
+                    <input type="button" class="buttons" value="4">
+                    <input type="button" class="buttons" value="5">
+                    <input type="button" class="buttons" value="6">
+                    <input type="button" class="buttons" value="-">
+                    <input type="button" class="buttons" value="1">
+                    <input type="button" class="buttons" value="2">
+                    <input type="button" class="buttons" value="3">
+                    <input type="button" class="buttons" value="+">
+                    <input type="button" class="buttons" value="±">
+                    <input type="button" class="buttons" value="0">
+                    <input type="button" class="buttons" value=".">
+                    <input type="button" class="buttons equals" value="=">
+                </div>
+			</div>
+			<!--计算器 end-->
+			
+			<!--答题卡弹窗start-->
+			<div class="card-con hidden">
+				<h3 class="titarea f-34 tit-nowrap">答题卡<i class="layer-closeAll fa fa-times"></i></h3>
+				<div class="conarea">
+					<div class="state-desarea b-btm-1px f-28 flex">
+						<span><i class="icon_cur"></i><em>当前</em></span>
+						<span><i class="icon_fin"></i><em>已做</em></span>
+						<span><i class="iconfont icon-biaoji"></i><em>标记</em></span>
+						<span><i class="icon_fau"></i><em>未做</em></span>
+					</div>
+					<h2 class="conitem-title">单选题</h2>
+					<ul class="conitem-list clearfix">
+						<li>
+							<span class="item completed">1</span>
+						</li>
+						<li>
+							<span class="item completed">2</span><!--①已做完的颜色状态-->
+						</li>
+						<li>
+							<span class="item marked">3</span><!--②标记待定的颜色状态-->
+						</li>
+						<li>
+							<span class="item">4</span>
+						</li>
+						<li>
+							<span class="item">5</span>
+						</li>
+						<li>
+							<span class="item current">6</span><!--③当前所在题号颜色状态-->
+						</li>
+						<li>
+							<span class="item">7</span>
+						</li>
+						<li>
+							<span class="item">8</span>
+						</li>
+						<li>
+							<span class="item">9</span>
+						</li>
+						<li>
+							<span class="item">10</span>
+						</li>
+					</ul>
+					<h2 class="conitem-title">多选题</h2>
+					<ul class="conitem-list clearfix">
+						<li>
+							<span class="item">11</span>
+						</li>
+						<li>
+							<span class="item">12</span>
+						</li>
+						<li>
+							<span class="item">13</span>
+						</li>
+						<li>
+							<span class="item">14</span>
+						</li>
+					</ul>
+					<h2 class="conitem-title">判断题</h2>
+					<ul class="conitem-list clearfix">
+						<li>
+							<span class="item">15</span>
+						</li>
+						<li>
+							<span class="item">16</span>
+						</li>
+						<li>
+							<span class="item">17</span>
+						</li>
+						<li>
+							<span class="item">18</span>
+						</li>
+					</ul>
+					<h2 class="conitem-title">不定项题</h2>
+					<ul class="conitem-list clearfix">
+						<li>
+							<span class="item">19</span>
+						</li>
+						<li>
+							<span class="item">20</span>
+						</li>
+						<li>
+							<span class="item">21</span>
+						</li>
+						<li>
+							<span class="item">22</span>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+			<!--答题卡弹窗   end-->
+			
+		</div>	
+		<!--wrapper end-->
+	</body>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="plugins/layer/layer.js"></script>
+	<script src="plugins/swiper/swiper.min.js"></script>
+	<script src="plugins/calculator/calculator.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+    $(function(){	
+    	//我的选择
+    	$(".option-item").click(function(){
+    		if($('.options').data('question-type')=='radio'){
+    			$(this).toggleClass("myanswer").siblings().removeClass("myanswer")
+    		}else{
+    			$(this).toggleClass("myanswer")
+    		}
+    	});
+		//显示答案
+    	$("#answer").click(function(){
+    		$(this).toggleClass("active");
+    		$(".question-area").toggleClass("showanswer");
+			$('.myanswer').each(function(){
+    			if(!$(this).hasClass('ok')){
+    				$(this).toggleClass("err")
+    			}
+			})
+			//显示答案--回答状态
+			var ans_ok=$(".option-item.ok em").text();
+			var ans_mine=$(".option-item.myanswer em").text();
+			$(".ans-info .ans-info-ok i").text(ans_ok);
+    		$(".ans-info .ans-info-mine i").text(ans_mine);
+    		if($('.myanswer').length==0){
+    			$('.ans-info-mine,.ans-info-state').hide()
+    		}else{
+    			$('.ans-info-mine,.ans-info-state').show();
+    			ans_ok==ans_mine?$('.ans-info-state').text('回答正确').toggleClass('isok'):$('.ans-info-state').text('回答错误').toggleClass('iserr')
+    		}
+    	});
+    	
+    	//交卷
+    	$("#submit").click(function(){
+    		layer.msg('交卷成功', {
+    			skin:'layer-tip',
+				time: 1500,
+				icon:'1'
+			});
+			setTimeout(function(){
+				location.href="tiku-report.html"
+			},1600)
+    	});
+            
+    	//加入标记
+    	$("#mark").click(function(){
+    		$(this).toggleClass("active");
+    		var val;
+    		if($(this).hasClass('active')){
+				val='已加入标记'
+			}else{
+				val='取消标记'
+			};
+    		layer.msg(val, {
+    			skin:'layer-tip',
+				time: 1000
+			});
+    	});
+    	
+    	//加入收藏
+    	$("#fav").click(function(){
+    		$(this).toggleClass("active");
+    		var val;
+    		if($(this).hasClass('active')){
+				val='已加入收藏'
+			}else{
+				val='取消收藏'
+			};
+    		layer.msg(val, {
+    			skin:'layer-tip',
+				time: 1000
+			});
+    	});
+    	
+    	//计算器
+    	window.Calculator({
+		    el: '.calculator',
+		    buttons: '.calc-buttons',
+		    output: '.calc-result>.data'
+		});
+		$("#jsq").click(function(){
+			layer.open({
+				skin: 'layer-custom',
+				type: 1,
+				title: '计算器',
+				closeBtn:1,
+				shade: 0.7,
+				area: ['100%','80%'],
+				offset: 'b',
+				shadeClose: true,
+				anim: 2,
+				isOutAnim: false,
+				scrollbar: false,
+				content: $(".calculator")
+			});
+		});
+    	
+    	
+    	//纠错
+    	$("#correct").click(function() {			  		
+			layer.open({
+				skin: 'layer-custom',
+				type: 1,
+				title: '试题纠错',
+				btn: ['取消','提交'],
+				btn2:function(){
+					if($(".input-checkbox:checked").length&&$(".correct-con").val().trim()!=''){
+						layer.msg('提交成功', {
+			    			skin:'layer-tip',
+							time: 1500,
+							icon:'1'
+						})
+					}else{
+						layer.msg('请勾选错误类型并填写试题出错原因', {
+			    			skin:'layer-tip',
+							time: 1500
+						});
+						return false;
+					}
+				},
+				closeBtn:1,
+				shade: 0.7,
+				area: '80%',
+				offset: 'auto',
+				shadeClose: false,
+				anim: 0,
+				isOutAnim: false,
+				scrollbar: false,
+				content: $(".correct-prompt")
+			});				
+		});
+		
+		//答题卡
+		$("#showcard").click(function() {			  		
+			layer.open({
+				skin: 'layer-custom',
+				type: 1,
+				title: false,
+				closeBtn:0,
+				shade: 0.7,
+				area: ['100%','80%'],
+				offset: 'b',
+				shadeClose: true,
+				anim: 2,
+				isOutAnim: false,
+				scrollbar: false,
+				content: $(".card-con")
+			});				
+		});
+	})	
+    </script>
+</html>

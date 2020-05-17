@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<script src="js/flexible.js"></script><!--rem布局脚本，需固定在此顺序，位置不要变动-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>试卷-练题报告</title>
+		<!--icon-font-->
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link rel="stylesheet" href="ali-icon/iconfont.css">
+		<!--plug-in-->
+		<link rel="stylesheet" href="plugins/swiper/swiper.min.css">
+		<link rel="stylesheet" href="plugins/layer/layer.css">
+		<!--app-->
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/app.css">
+	</head>
+
+	<body>
+		<!--wrapper start-->
+		<div class="app-wrapper">
+			<!--头部标题start-->
+			<div class="app-header">
+				<div class="main-tit color-fff text-center f-34 tit-nowrap">
+					练题报告
+				</div>
+				<a href="javascript:history.go(-1)" class="opeleft f-60 color-fff"><i class="fa fa-angle-left"></i></a>
+			</div>
+			<!--头部标题end---->
+			
+			<!--主体内容区域start-->
+			<div class="main-wrap over-hidden app-content-toponly">
+				<div class="main-con h-full over-hidden">	
+					<!--任务报告start-->
+					<div class="page-report">
+						<div class="con-area f-28">
+							<!--普通练题结果头部信息（显示答对多少道题）start-->
+							<div class="result-info text-center b-btm-1px">
+								<div class="cirle-range">
+									<div class="cirle">
+								        <div class="clip">
+								            <div class="left"></div>
+								            <div class="right width-none"></div>
+								        </div>
+								        <div class="flex-tab  num" data-percent="27.40">
+								        	<div class="flex-tab-cell v-middle">
+								        		<span class="f-70 color-lightgreen text-bold">15</span><i class="color-999">题</i>
+								        		<p class="f-26 pd-top10 color-999">正确率<i class="color-orange">27.40%</i></p>
+								        	</div>
+								        </div>
+								    </div>	
+								</div>
+								<h2 class="f-28">共80题，答对15题，答错34题，31题未做</h2>
+								<p class="f-26 color-999">本次做题成绩一般，再接再厉</p>
+							</div>
+							<!--普通练题头部信息（显示答对多少道题）end-->
+							
+							<div class="result-detail">
+								<div class="state-desarea b-btm-1px f-28 flex">
+									<span><i class="icon_ok"></i><em>正确</em></span>
+									<span><i class="fa fa-times"></i><em>错误</em></span>
+									<span><i class="icon_fau"></i><em>未做</em></span>
+								</div>
+								<h2 class="conitem-title">单选题</h2>
+								<ul class="conitem-list clearfix">
+									<li>
+										<span class="item correct">1</span>
+									</li>
+									<li>
+										<span class="item correct">2</span><!--①答对颜色状态-->
+									</li>
+									<li>
+										<span class="item error">3</span><!--②答错颜色状态-->
+									</li>
+									<li>
+										<span class="item">4</span>
+									</li>
+									<li>
+										<span class="item">5</span>
+									</li>
+									<li>
+										<span class="item error">6</span>
+									</li>
+									<li>
+										<span class="item error">7</span>
+									</li>
+									<li>
+										<span class="item error">8</span>
+									</li>
+									<li>
+										<span class="item correct">9</span>
+									</li>
+									<li>
+										<span class="item correct">10</span>
+									</li>
+								</ul>
+								<h2 class="conitem-title">多选题</h2>
+								<ul class="conitem-list clearfix">
+									<li>
+										<span class="item correct">11</span>
+									</li>
+									<li>
+										<span class="item">12</span>
+									</li>
+									<li>
+										<span class="item correct">13</span>
+									</li>
+									<li>
+										<span class="item error">14</span>
+									</li>
+								</ul>
+								<h2 class="conitem-title">判断题</h2>
+								<ul class="conitem-list clearfix">
+									<li>
+										<span class="item error">15</span>
+									</li>
+									<li>
+										<span class="item correct">16</span>
+									</li>
+									<li>
+										<span class="item correct">17</span>
+									</li>
+									<li>
+										<span class="item error">18</span>
+									</li>
+								</ul>
+								<h2 class="conitem-title">不定项选择题</h2>
+								<ul class="conitem-list clearfix">
+									<li>
+										<span class="item correct">19</span>
+									</li>
+									<li>
+										<span class="item correct">20</span>
+									</li>
+									<li>
+										<span class="item error">21</span>
+									</li>
+									<li>
+										<span class="item correct">22</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="ope-area f-30">
+							<a href="tiku-paper-type1.html" class="ope-btn btn-blue">重新练习</a>
+							<a class="ope-btn btn-orange">查看解析</a>
+							<a href="tiku-zhangjie.html" class="ope-btn btn-green">返回</a>
+						</div>
+					</div>
+					<!--任务报告   end-->
+				</div>	
+			</div>
+			<!--主体内容区域end---->
+		</div>	
+		<!--wrapper end-->
+	</body>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="plugins/layer/layer.js"></script>
+	<script src="plugins/swiper/swiper.min.js"></script>
+    <script src="js/common.js"></script>
+</html>
